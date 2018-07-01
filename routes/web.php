@@ -15,11 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('client', 'ClientsController@store');
+Route::get('client', 'ClientsController@create');
 
-Route::post('client', function(\Illuminate\Http\Request $request){
-    return $request->get('value');
-})->name('client.store');
+Route::post('client', 'ClientsController@store')->name('client.store');
 
 /*Route::get('minharota', function(){
     return view('helloworld');
