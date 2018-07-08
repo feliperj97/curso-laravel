@@ -1,4 +1,5 @@
 <h1>Listagem de clientes</h1>
+<a href = "{{ route('eloquent.client.create') }}">Criar novo cliente</a>
 <table border = "1">
     <thead>
         <tr>
@@ -12,7 +13,7 @@
         <tr>
             <td>{{ $client->id }}</td>
             <td>{{ $client->name }}</td>
-            <td>{{ $client->address }}</td>
+            <td>{{ $client->endereco }}</td>
         </tr>
     @endforeach    
     </tbody>

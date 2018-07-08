@@ -16,7 +16,7 @@ class EloquentClientsController extends Controller
     }
 
     public function create(){
-        return view('admin.client.client');
+        return view('eloquent.create');
     }
 
     public function store(Request $request){

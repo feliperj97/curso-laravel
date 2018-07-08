@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::group(['prefix'=>'eloquent', 'as' => 'eloquent.'], function(){
     Route::get('clients', 'EloquentClientsController@index');
     Route::post('cliente', 'ClientsController@store')->name('client.list');
+    Route::get('clients/create', 'EloquentClientsController@create')->name('client.create');
+    Route::post('clients/store', 'EloquentClientsController@store')->name('client.store');
 
 });
 
