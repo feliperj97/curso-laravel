@@ -20,6 +20,8 @@ class EloquentClientsController extends Controller
     }
 
     public function store(Request $request){
-        return $request->get('value');
+        $client = new Client();
+        $client->create($request->all());
+        return redirect()->route('eloquent.client.list');
     }
 }
